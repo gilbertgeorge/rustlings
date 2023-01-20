@@ -4,6 +4,15 @@
 
 fn main() {
     call_me();
+
+    let x = plus_one(5);
 }
 
-// I AM NOT DONE
+fn call_me() {
+    println!("call_me")
+}
+
+fn plus_one(x: i32) -> i32 {
+    return x + 1;
+}
+
