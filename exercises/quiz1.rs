@@ -10,10 +10,15 @@
 // Write a function that calculates the price of an order of apples given
 // the quantity bought. No hints this time!
 
-// I AM NOT DONE
 
 // Put your function here!
-// fn calculate_price_of_apples {
+fn calculate_price_of_apples(quantity: u16) -> u16 {
+    return if quantity > 40 {
+        quantity
+    } else {
+        quantity * 2
+    }
+}
 
 // Don't modify this function!
 #[test]
@@ -28,3 +33,5 @@ fn verify_test() {
     assert_eq!(41, price3);
     assert_eq!(65, price4);
 }
+
+
