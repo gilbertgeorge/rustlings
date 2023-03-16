@@ -1,18 +1,15 @@
 // iterators4.rs
 // Execute `rustlings hint iterators4` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
-
 pub fn factorial(num: u64) -> u64 {
-    // Complete this function to return the factorial of num
-    // Do not use:
-    // - return
-    // Try not to use:
-    // - imperative style loops (for, while)
-    // - additional variables
-    // For an extra challenge, don't use:
-    // - recursion
-    // Execute `rustlings hint iterators4` for hints.
+    if num < 2 {
+        1
+    }
+    else {
+        let numbers: Vec<u64> = (1..num+1).collect();
+        let result = numbers.into_iter().reduce(|x, y| x*y);
+        result.unwrap()
+    }
 }
 
 #[cfg(test)]
